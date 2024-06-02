@@ -1,33 +1,20 @@
-package com.springapp.crud.entity;
+package com.springapp.crud.DTO;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
 
-@Table(name = "customer")
-public class customer {
-    @Id
-    @Column(name = "customer_id", length = 20)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class CustomerDTO {
     private int CustID;
-    @Column(name = "customer_name", length = 50)
     private String customerName;
-    @Column(name = "customer_address", length = 80)
     private String customerAddress;
-    @Column(name = "customer_mobile", length = 15)
     private int mobile;
 
-    public customer(int custID, String customerName, String customerAddress, int mobile) {
+    public CustomerDTO(int custID, String customerName, String customerAddress, int mobile) {
         CustID = custID;
         this.customerName = customerName;
         this.customerAddress = customerAddress;
         this.mobile = mobile;
     }
 
-
-    public customer() {
+    public CustomerDTO() {
     }
 
     public int getCustID() {
@@ -64,7 +51,7 @@ public class customer {
 
     @Override
     public String toString() {
-        return "customer{" +
+        return "customerDTO{" +
                 "CustID=" + CustID +
                 ", customerName='" + customerName + '\'' +
                 ", customerAddress='" + customerAddress + '\'' +

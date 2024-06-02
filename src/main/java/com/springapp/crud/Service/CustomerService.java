@@ -1,7 +1,7 @@
 package com.springapp.crud.Service;
 
-import com.springapp.crud.DTO.customerDTO;
+import com.springapp.crud.DTO.CustomerSaveDTO;
 
 public interface CustomerService {
-    String addCustomer(customerDTO customerDTO);
+    String addCustomer(CustomerSaveDTO customerSaveDTO);
 }
